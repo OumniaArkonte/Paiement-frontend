@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- custom css file link  -->
-  <link rel="stylesheet" href="src/app/view/paiements/paiement-create/paiement-create.component.css">
+  <link rel="stylesheet" href="./paiement-create.component.css">
 
 </head>
 <body>
@@ -23,29 +23,29 @@
 
         <div class="inputBox">
           <span>nom :</span>
-          <input type="text" placeholder="john ">
+          <input type="text" placeholder="john " [(ngModel)]="paiement.achat.client.nom">
         </div>
         <div class="inputBox">
           <span>prenom :</span>
-          <input type="text" placeholder=" deo">
+          <input type="text" placeholder=" deo" [(ngModel)]="paiement.achat.client.prenom">
         </div>
         <div class="inputBox">
           <span>cin :</span>
-          <input type="text" placeholder="EE287536">
+          <input type="text" placeholder="EE287536"  [(ngModel)]="paiement.achat.client.cin">
         </div>
         <div class="inputBox">
           <span>id :</span>
-          <input type="text" placeholder="A65F39GB">
+          <input type="text" placeholder="A65F39GB" [(ngModel)]="paiement.id">
         </div>
 
         <div class="flex">
           <div class="inputBox">
             <span>Ville :</span>
-            <input type="text" placeholder="Morocco">
+            <input type="text" placeholder="Morocco" [(ngModel)]="paiement.achat.client.ville">
           </div>
           <div class="inputBox">
-            <span>Compte :</span>
-            <input type="text" placeholder="">
+            <span>paiementEffectue :</span>
+            <input type="text" placeholder="" [(ngModel)]="paiement.paiementEffectue">
           </div>
         </div>
 
@@ -67,16 +67,9 @@
           <span>credit card number :</span>
           <input type="number" placeholder="1111-2222-3333-4444">
         </div>
-        <div class="inputBox">
-          <span>exp month :</span>
-          <input type="text" placeholder="january">
-        </div>
+
 
         <div class="flex">
-          <div class="inputBox">
-            <span>exp year :</span>
-            <input type="number" placeholder="2022">
-          </div>
 
         </div>
 
@@ -84,7 +77,7 @@
 
     </div>
 
-    <input type="submit" value="proceed to checkout" class="submit-btn">
+    <input type="submit" value="Save" class="submit-btn" (click)="save()">
 
   </form>
 

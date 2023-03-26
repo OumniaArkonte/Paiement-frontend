@@ -11,6 +11,7 @@ export class PaiementService {
   private _paiements!: Array<Paiement>;
   private _url = "http://localhost:8036/api/v1/paiement/";
 
+
   constructor(private _http:HttpClient) { }
 
   public findAll():Observable<Array<Paiement>>{

@@ -1,1 +1,21 @@
-<p>paiement-list works!</p>
+<div class="card">
+  <div class="card-footer"></div>
+  <div class="card-body">
+
+    <table class="table table-hover table-striped">
+      <thead>
+      <th> id</th>
+      <th>ville </th>
+      <th>paiementEffectue </th>
+
+      </thead>
+      <tbody>
+      <tr *ngFor="let p of paiements">
+        <td> {{p.id}}</td>
+        <td>{{p.achat.client.ville}}</td>
+        <td>{{p.paiementEffectue}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
