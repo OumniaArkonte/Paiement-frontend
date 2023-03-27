@@ -9,7 +9,7 @@ import {Observable} from "rxjs";
 export class PaiementService {
   private _paiement!: Paiement;
   private _paiements!: Array<Paiement>;
-  private _url = "http://localhost:8036/api/v1/paiement/";
+  private _url = "http://localhost:8033/GestionCommertiale/Paiement/";
 
 
   constructor(private _http:HttpClient) { }
@@ -18,7 +18,7 @@ export class PaiementService {
     return this._http.get<Array<Paiement>>(this.url);
   }
   public save(paiement: Paiement):Observable<Paiement>{
-    return this._http.post<Paiement>(this.url , paiement);
+    return this._http.post<Paiement>(this.url , this.paiement);
   }
   public  deleteByReference(code: string): Observable<number>{
     return this._http.delete<number>(this.url+'code/'+code);
