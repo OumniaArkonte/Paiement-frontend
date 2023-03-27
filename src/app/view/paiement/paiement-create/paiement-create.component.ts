@@ -17,7 +17,6 @@ export class PaiementCreateComponent implements OnInit{
         if (data == null) {
           alert('failure : code exist')
         }else{
-          //this.paiement = null;
           alert('success : paiement sav')
         }
       }
